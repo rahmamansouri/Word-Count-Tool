@@ -31,11 +31,11 @@ public class WordCount extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        wrdCountPanel.setBackground(new java.awt.Color(0, 153, 153));
+        wrdCountPanel.setBackground(new java.awt.Color(153, 153, 153));
 
-        titlelabel.setBackground(new java.awt.Color(255, 102, 204));
+        titlelabel.setBackground(new java.awt.Color(51, 102, 255));
         titlelabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 24)); // NOI18N
-        titlelabel.setText("Word Count Tools");
+        titlelabel.setText("Word Counter");
         titlelabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 titlelabelActionPerformed(evt);
@@ -46,10 +46,11 @@ public class WordCount extends javax.swing.JFrame {
         wrdTextArea.setRows(5);
         jScrollPane1.setViewportView(wrdTextArea);
 
+        wrdLabel.setBackground(new java.awt.Color(255, 255, 255));
         wrdLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         wrdLabel.setText("Total words :");
 
-        wrdCountButton.setBackground(new java.awt.Color(255, 204, 204));
+        wrdCountButton.setBackground(new java.awt.Color(51, 51, 255));
         wrdCountButton.setText("Count your Words");
         wrdCountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +58,7 @@ public class WordCount extends javax.swing.JFrame {
             }
         });
 
+        totalWordLabel.setBackground(new java.awt.Color(255, 255, 255));
         totalWordLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         totalWordLabel.setText("Type your words");
 
@@ -64,6 +66,7 @@ public class WordCount extends javax.swing.JFrame {
         totalCounttextfield.setRows(5);
         jScrollPane3.setViewportView(totalCounttextfield);
 
+        clearbtn.setBackground(new java.awt.Color(51, 51, 255));
         clearbtn.setText("Clear");
         clearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +74,7 @@ public class WordCount extends javax.swing.JFrame {
             }
         });
 
+        exitbtn.setBackground(new java.awt.Color(51, 51, 255));
         exitbtn.setText("Exit");
         exitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,25 +88,25 @@ public class WordCount extends javax.swing.JFrame {
             wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wrdCountPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wrdCountPanelLayout.createSequentialGroup()
-                        .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(315, 315, 315))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wrdCountPanelLayout.createSequentialGroup()
-                        .addComponent(wrdCountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(196, 196, 196))))
+                .addComponent(wrdCountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(196, 196, 196))
             .addGroup(wrdCountPanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(wrdLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
                 .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, wrdCountPanelLayout.createSequentialGroup()
-                            .addComponent(clearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(wrdCountPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(wrdLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63)
+                        .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, wrdCountPanelLayout.createSequentialGroup()
+                                    .addComponent(clearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(wrdCountPanelLayout.createSequentialGroup()
+                        .addGap(346, 346, 346)
+                        .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(wrdCountPanelLayout.createSequentialGroup()
@@ -113,9 +117,9 @@ public class WordCount extends javax.swing.JFrame {
         wrdCountPanelLayout.setVerticalGroup(
             wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wrdCountPanelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(43, 43, 43)
                 .addComponent(titlelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(wrdCountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(wrdCountPanelLayout.createSequentialGroup()
